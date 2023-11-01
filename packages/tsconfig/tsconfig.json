@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    /* == Module: this will likely need to be overridden as per the project == */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": false, // ESM doesn't yet support JSON modules (@sindresorhus),
+
+    /* == Language & Environment == */
+    "target": "ESNext", // Node 16
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+
+    /* == Emit == */
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "newLine": "lf",
+    "removeComments": true,
+
+    /* == Interop Constraints == */
+    "allowJs": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true, // To provide backwards compatibility, Node.js allows you to import most CommonJS packages with a default import (@sindresorhus)
+
+    /* == JSX Support == */
+    "jsx": "react-jsx",
+
+    /* == Output Formatting == */
+    "pretty": true,
+
+    /* == Completeness == */
+    "skipLibCheck": true,
+
+    /* == Type Checking == */
+    "strict": true,
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "useUnknownInCatchVariables": false,
+  }
+}

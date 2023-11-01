@@ -1,0 +1,37 @@
+{
+  "name": "@reemus/config",
+  "version": "0.1.0",
+  "description": "Shared configs for TypeScript, Prettier, ESLint, SyncPack and more",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=16"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "config",
+    "configuration",
+    "eslint",
+    "prettier",
+    "ts",
+    "tsconfig",
+    "typescript",
+    "syncpack"
+  ],
+  "repository": "https://github.com/reemus-dev/js-config",
+  "author": {
+    "name": "Tarun Ramesh",
+    "url": "https://reemus.dev"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@changesets/cli": "2.26.2"
+  }
+}

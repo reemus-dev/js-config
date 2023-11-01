@@ -1,0 +1,33 @@
+{
+  "name": "@reemus/config-syncpack",
+  "version": "0.1.0",
+  "description": "Base SyncPack config",
+  "license": "MIT",
+  "type": "commonjs",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=16"
+  },
+  "author": {
+    "name": "Tarun Ramesh",
+    "url": "https://reemus.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reemus-dev/js-config.git",
+    "directory": "packages/syncpack"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./index.js",
+  "exports": "./index.js",
+  "scripts": {},
+  "peerDependencies": {
+    "syncpack": ">=11.0.0"
+  },
+  "keywords": [
+    "config",
+    "syncpack"
+  ]
+}

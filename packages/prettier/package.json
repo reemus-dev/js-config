@@ -1,0 +1,36 @@
+{
+  "name": "@reemus/config-prettier",
+  "version": "0.1.0",
+  "description": "Base Prettier config",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=16"
+  },
+  "author": {
+    "name": "Tarun Ramesh",
+    "url": "https://reemus.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reemus-dev/js-config.git",
+    "directory": "packages/prettier"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "exports": "./index.js",
+  "scripts": {},
+  "peerDependencies": {
+    "@trivago/prettier-plugin-sort-imports": ">=4.0.0",
+    "prettier-plugin-tailwindcss": ">=0.5.0",
+    "prettier": ">=3.0.0"
+  },
+  "keywords": [
+    "config",
+    "prettier"
+  ]
+}
