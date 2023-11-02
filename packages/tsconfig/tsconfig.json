@@ -1,28 +1,43 @@
 {
+  /*
+    Inspired by:
+     - sindresorhus/tsconfig
+     - https://www.totaltypescript.com/tsconfig-cheat-sheet
+  */
   "compilerOptions": {
-    /* == Module: this will likely need to be overridden as per the project == */
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": false, // ESM doesn't yet support JSON modules (@sindresorhus),
+    /*
+      == Module: runtime and compilation tool determines config ==
+       - If transpiling with TypeScript
+        - module: 'NodeNext'
+        - moduleResolution: 'NodeNext'
+       - If using a bundler like webpack or rollup
+        - module: 'Bundler'
+        - moduleResolution: 'ESNext'
+    */
+    "module": "NodeNext", // What module syntax to use
+    "moduleResolution": "NodeNext", // How to resolve modules
+    "moduleDetection": "force", // Forces TS to consider all files as modules,
 
-    /* == Language & Environment == */
-    "target": "ESNext", // Node 16
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    /* == Language & Environment: likely to override per project == */
+    "target": "ES2022", // Prefer over ESNext for stability
+    "lib": ["ES2022", "DOM", "DOM.Iterable"], // What built-in types to include, can omit ["DOM", "DOM.Iterable"] if not running in browser
 
     /* == Emit == */
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "noEmitOnError": true,
+    "declaration": true, // Emit .d.ts files
+    "sourceMap": true, // Emit source maps for debugging and helping jump to original source code using go-to-definition
+    "declarationMap": true, // Emit declaration maps for jump to original source code using go-to-definition
+    // "composite": true, // Emit .tsbuildinfo files indicating part of monorepo and helps to cache builds to run faster
     "newLine": "lf",
     "removeComments": true,
 
-    /* == Interop Constraints == */
-    "allowJs": true,
-    "isolatedModules": true,
+    /* == Interop == */
+    "allowJs": true, // Allow importing .js files
+    "resolveJsonModule": true, // Allow importing .json files
+    "isolatedModules": true, // Compatability between CJS and ESM
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true, // To provide backwards compatibility, Node.js allows you to import most CommonJS packages with a default import (@sindresorhus)
+    "verbatimModuleSyntax": true, // Gives you strict errors for import and export syntax in .cts and .mts files
 
     /* == JSX Support == */
     "jsx": "react-jsx",
@@ -30,14 +45,13 @@
     /* == Output Formatting == */
     "pretty": true,
 
-    /* == Completeness == */
-    "skipLibCheck": true,
-
     /* == Type Checking == */
     "strict": true,
+    "skipLibCheck": true, // Skips checking types of .d.ts files in node_modules
     "noImplicitAny": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "useUnknownInCatchVariables": false,
-  }
+    "noUncheckedIndexedAccess": true, // Prevent accessing array or object without checking if defined
+    "useUnknownInCatchVariables": false, // Use 'unknown' instead of 'any' in catch variables
+  },
+  "exclude": ["node_modules"]
 }

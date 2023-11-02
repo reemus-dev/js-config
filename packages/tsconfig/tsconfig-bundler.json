@@ -1,63 +1,7 @@
 {
-  /* Inspired by:
-    - sindresorhus/tsconfig
-    - https://www.totaltypescript.com/tsconfig-cheat-sheet
-  */
+  "extends": ["../tsconfig.json"],
   "compilerOptions": {
-    /*
-      == Module ==
-      Runtime and compilation tool determines this config
-        - If transpiling with TypeScript
-          - module: 'nodenext'
-          - moduleResolution: 'nodenext'
-        - If using a bundler like webpack or rollup
-            - module: 'bundler'
-            - moduleResolution: 'esnext'
-    */
-    "module": "esnext",
-    /*
-
-      [moduleResolution]
-      Tells TypeScript how to resolve modules
-        - 'nodenext': if using the TypeScript compiler (also best option is code is being run in Node.js)
-        - 'bundler': if using a bundler like webpack or rollup
-    */
-    "moduleResolution": "nodenext",
-    "moduleDetection": "force", // Forces TS to consider all files as modules,
-
-    /* == Language & Environment: likely to override per project == */
-    "target": "ES2022", // Prefer over ESNext for stability
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
-
-    /* == Emit == */
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "noEmitOnError": true,
-    "newLine": "lf",
-    "removeComments": true,
-
-    /* == Interop == */
-    "allowJs": true, // Allow importing .js files
-    "resolveJsonModule": true, // Allow importing .json files
-    "isolatedModules": true, // Compatability between CJS and ESM
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true, // To provide backwards compatibility, Node.js allows you to import most CommonJS packages with a default import (@sindresorhus)
-    "verbatimModuleSyntax": true, // Gives you strict errors for import and export syntax in .cts and .mts files
-
-    /* == JSX Support == */
-    "jsx": "react-jsx",
-
-    /* == Output Formatting == */
-    "pretty": true,
-
-    /* == Type Checking == */
-    "strict": true,
-    "skipLibCheck": true, // Skips checking types of .d.ts files in node_modules
-    "noImplicitAny": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true, // Prevent accessing array or object without checking if defined
-    "useUnknownInCatchVariables": false, // Use 'unknown' instead of 'any' in catch variables
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
   }
 }
