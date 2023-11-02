@@ -1,5 +1,11 @@
 # @reemus/config-ts
 
+## 0.2.1
+
+### Patch Changes
+
+- Fix path references to the bash tsconfig.json file
+
 ## 0.2.0
 
 ### Minor Changes
