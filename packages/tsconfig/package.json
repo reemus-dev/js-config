@@ -1,6 +1,6 @@
 {
   "name": "@reemus/config-ts",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Base TypeScript tsconfig.json",
   "license": "MIT",
   "type": "module",

@@ -1,5 +1,11 @@
 # @reemus/config-ts
 
+## 0.2.2
+
+### Patch Changes
+
+- Set 'useUnknownInCatchVariables' to true
+
 ## 0.2.1
 
 ### Patch Changes
